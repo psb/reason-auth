@@ -2,20 +2,20 @@
 
 (using melange 0.1)
 
-(name melange-opam-template)
+(name reason-auth)
 
 (license "MIT")
 
-(maintainers <your_name>)
+(maintainers Paul Bacchus)
 
-(authors <your_name>)
+(authors Paul Bacchus)
 
-(homepage https://github.com/your/project)
+(homepage https://github.com/psb/reason-auth)
 
-(bug_reports https://github.com/your/project/issues)
+(bug_reports https://github.com/psb/reason-auth/issues)
 
 (package
  (allow_empty)
- (name melange-opam-template)
- (synopsis "Melange project")
- (description "Minimal melange project"))
+ (name reason-auth)
+ (synopsis "3rd party components, authentication and ReasonReact")
+ (description "3rd party components, authentication and ReasonReact"))

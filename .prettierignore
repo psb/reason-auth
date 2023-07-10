@@ -1,7 +1,7 @@
 # Ignore all files.
 *.*
 # Unignore:
-!*.html
-!*.js
-!*.css
-!*.md
+!**/*.html
+!**/*.js
+!**/*.css
+!**/*.md

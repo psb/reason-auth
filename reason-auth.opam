@@ -1,0 +1,21 @@
+opam-version: "2.0"
+synopsis: "3rd party components, authentication and ReasonReact"
+description: "3rd party components, authentication and ReasonReact"
+maintainer: ["Paul Bacchus"]
+authors: ["Paul Bacchus"]
+license: "MIT"
+homepage: "https://github.com/psb/reason-auth"
+bug-reports: "https://github.com/psb/reason-auth/issues"
+depends: [
+  "ocaml" {>= "4.14.0" & < "5.0.0"}
+  "reason" {>= "3.8.1" & < "4.0.0"}
+  "dune" {>= "3.8"}
+  "melange" {>= "1.0.0"}
+  "reactjs-jsx-ppx" {>= "1.0.0"}
+  "reason-react" {>= "0.11.0"}
+  "ocaml-lsp-server" {dev}
+  "dot-merlin-reader" {dev}
+  "odoc" {with-doc}
+  "ocamlformat" {>= "0.25.0"}
+]
+dev-repo: "git+https://github.com/psb/reason-auth.git"
