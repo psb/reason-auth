@@ -1,7 +1,7 @@
 (melange.emit
  (target output)
  (alias react)
- (libraries reason-react)
+ (libraries reason-react bindings)
  (preprocess
   (pps reactjs-jsx-ppx))
  (module_systems es6))

@@ -7,5 +7,6 @@ let make = () => {
     <p> {React.string("Email: barky@example.com")} </p>
     <p className="mb-4"> {React.string("Password: WoofWoof12345")} </p>
     <LoginButton />
+    <LogoutButton />
   </div>;
 };
