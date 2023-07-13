@@ -4,19 +4,33 @@ type hook;
 [@bs.send] external loginWithRedirect: hook => unit = "loginWithRedirect";
 [@bs.send] external logout: hook => unit = "logout";
 
-[@bs.val] [@bs.scope ("window", "location")]
-external origin: string = "origin";
+type user;
+// type user = {
+//   name: string,
+//   email: string,
+// };
+[@bs.get] external user: hook => user = "user";
+[@bs.get] external name: user => string = "name";
+[@bs.get] external nickname: user => string = "nickname";
+[@bs.get] external email: user => string = "email";
+[@bs.get] external emailVerified: user => bool = "email_verified";
 
-module Auth0Provider = {
-  type auth_param = {redirect_uri: string};
-  [@bs.module "@auth0/auth0-react"] [@react.component]
-  external make:
-    (
-      ~domain: string,
-      ~clientId: string,
-      ~authorizationParams: auth_param,
-      ~children: React.element
-    ) =>
-    React.element =
-    "Auth0Provider";
-};
+[@bs.get] external isAuthenticated: hook => bool = "isAuthenticated";
+[@bs.get] external isLoading: hook => bool = "isLoading";
+
+// [@bs.val] [@bs.scope ("window", "location")]
+// external origin: string = "origin";
+
+// module Auth0Provider = {
+//   type auth_param = {redirect_uri: string};
+//   [@bs.module "@auth0/auth0-react"] [@react.component]
+//   external make:
+//     (
+//       ~domain: string,
+//       ~clientId: string,
+//       ~authorizationParams: auth_param,
+//       ~children: React.element
+//     ) =>
+//     React.element =
+//     "Auth0Provider";
+// };
