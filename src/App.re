@@ -2,10 +2,9 @@
 let make = () => {
   let url = ReasonReactRouter.useUrl();
 
-  <div className="container mx-auto max-w-md p-4">
-    {switch (url.path) {
-     | ["profile"] => <Profile />
-     | _ => <Login />
-     }}
-  </div>;
+  switch (url.path) {
+  | ["profile"] =>
+    <div className="container mx-auto max-w-md p-4"> <Profile /> </div>
+  | _ => <div className="container mx-auto max-w-md p-4"> <Login /> </div>
+  };
 };

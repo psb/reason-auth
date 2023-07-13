@@ -36,11 +36,13 @@ let make = () => {
           <div className="mb-2 text-sm text-right">
             {React.string("Photo by ")}
             <a
+              className="underline"
               href="https://unsplash.com/@charlesdeluvio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
               {React.string("charlesdeluvio ")}
             </a>
             {React.string("on ")}
             <a
+              className="underline"
               href="https://unsplash.com/photos/K4mSJ7kc0As?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
               {React.string("Unsplash")}
             </a>
