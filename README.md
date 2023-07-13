@@ -1,11 +1,10 @@
-# melange-opam-template (ReasonReact, Vite, Tailwind)
+# Reason Auth
 
-Forked from [this original template](https://github.com/melange-re/melange-opam-template) and changed to use Vite and Tailwind. This template uses only Reason syntax and not OCaml.
+This is a basic app that shows you how you can use [Auth0](https://auth0.com/) authentication with [Reason](https://reasonml.github.io/en) and [Reason React](https://reasonml.github.io/reason-react/en). The app uses the Auth0 react component and has bindings to the component. The project uses [Melange](https://melange.re/v1.0.0/) to transform the Reason code to JS.
 
-A simple project template using [Melange](https://github.com/melange-re/melange)
-with [opam](https://opam.ocaml.org/).
+This project is deployed at: https://reason-auth.netlify.app/
 
-If you are looking for a template with esy, check [melange-esy-template](https://github.com/melange-re/melange-esy-template).
+An accompanying blog post about using auth and 3rd party react components with ReasonReact can be found [here]()
 
 ## Quick Start
 
@@ -19,11 +18,11 @@ make dev
 
 ## React
 
-React support is provided by [`reason-react`](https://github.com/reasonml/reason-react/). The entry point of the sample React app is [`src/Index.re`](src/Index.re).
+React support is provided by [`reason-react`](https://github.com/reasonml/reason-react/). The entry point of the app is [`src/Index.re`](src/Index.re).
 
-### Fast refresh
+## JavaScript output
 
-To enable React fast refresh, write `.rei` interface files for each component.
+`_build/default/src/output/src/Index.js` in `index.html` is used as the entry point for Vite.
 
 ## Commands
 
@@ -36,13 +35,30 @@ are a few of the most useful ones:
 - `make watch`: watch for the filesystem and have Melange rebuild on every
   change
 - `make dev`: serve the JS application with a local HTTP server
-- `make preview`: build the JS and serve the built JS application with a local HTTP server
+- `make bundle`: create production build of app
+- `make preview`: serve the production build of the JS application with a local HTTP server
 
-## JavaScript output
+## Project Structure
 
-Since Melange just compiles source files into JavaScript files, it can be used
-for projects on any JavaScript platform - not just the browser.
-
-_This template includes just one `melange.emit` stanza and not the two stanzas from the original template. Please refer to the original template to see how to output JS code for the browser and node using two separate stanzas._
-
-`_build/default/src/output/src/Index.js` in the `index.html` is used as the entry point for Vite.
+```sh
+/
+├── _build/
+├── public/
+│   ├── index.css
+│   └── ...
+├── src/
+│   ├── dune
+│   ├── bindings/
+│   │   ├── auth0.re
+│   │   └── dune
+│   ├── Index.re
+│   ├── Index.rei
+│   └── ...
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── <project_name>.opam
+├── dune
+├── dune-project
+└── Makefile
+```
