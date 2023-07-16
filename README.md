@@ -4,7 +4,7 @@ This is a basic app that shows you how you can use [Auth0](https://auth0.com/) a
 
 This project is deployed at: https://reason-auth.netlify.app/
 
-An accompanying blog post about using auth and 3rd party react components with ReasonReact can be found [here]()
+An accompanying blog post about using auth and 3rd party react components with ReasonReact can be found [here](https://dev.to/psb/reasonreact-auth0-and-3rd-party-react-components-31kp)
 
 ## Quick Start
 
